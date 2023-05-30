@@ -27,6 +27,7 @@ export type InspectCommandFullOptions = {
   specifier: string
   module: string
   glob: string
+  format: 'json' | 'table'
 }
 
 export type InspectCommandOptions = InspectCommandOptionsShortcuts & InspectCommandFullOptions

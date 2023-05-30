@@ -92,7 +92,11 @@ export default {
 
     spinner.stop()
 
-    print.table(generateTable(resultsWithOccurrences), { format: 'lean' })
+    if (options.format === 'json') {
+      console.log(JSON.stringify(resultsWithOccurrences))
+    } else {
+      print.table(generateTable(resultsWithOccurrences), { format: 'lean' })
+    }
 
     if (analysisErrors.length) {
       /**
